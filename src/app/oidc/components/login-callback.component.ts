@@ -15,8 +15,8 @@ export class LoginCallbackComponent implements OnInit {
         private readonly _router: Router
     ) {}
 
-    async ngOnInit() {
-        await this._authService.completeAuthentication();
+    ngOnInit() {
+        this._authService.completeAuthentication();
         
         this._router.navigate(
             [this._authUrlConstantService.getAuthSuccessCallbackRedirectUrl()]

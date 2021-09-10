@@ -22,12 +22,12 @@ export class AuthenticationService {
     return this._user?.profile;
   }
 
-  async startAuthentication(): Promise<void> {
+  startAuthentication(): Promise<void> {
     this.GetUserManager();
     return this._userManager.signinRedirect();
   }
 
-  async completeAuthentication() {
+  completeAuthentication() {
     this.GetUserManager();
     return this._userManager.signinRedirectCallback().then((user) => {
       this._user = user;
@@ -36,12 +36,12 @@ export class AuthenticationService {
   }
 
 
-  async startLogout(): Promise<void> {
+  startLogout(): Promise<void> {
     this.GetUserManager();
     return this._userManager.signoutRedirect();
   }
 
-  async completeLogout() {
+  completeLogout() {
     this.GetUserManager();
     this._user = null;
     return this._userManager.signoutRedirectCallback();

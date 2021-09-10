@@ -11,7 +11,7 @@ export class SilentCallbackComponent implements OnInit {
 
     ) {}
 
-    async ngOnInit() {
+    ngOnInit() {
         this._authService.silentSignInAuthentication();
     }
 }
