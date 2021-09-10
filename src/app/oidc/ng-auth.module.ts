@@ -16,10 +16,9 @@ import { LoginCallbackComponent, LogoutCallbackComponent, SilentCallbackComponen
         SilentCallbackComponent,
     ],
     imports: [
-        BrowserModule,
         CommonModule,
         FormsModule,
-        RouterModule
+        RouterModule,
     ],
     providers: [
         AuthGuard,
