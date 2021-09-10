@@ -1,4 +1,4 @@
-export class EntryPointClientSettings {    
+export class UserManagerSettings {    
     authority : string;
     client_id : string;
     redirect_uri : string;
